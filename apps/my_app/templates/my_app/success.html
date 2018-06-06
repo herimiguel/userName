@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>USER NAME</th>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.user_name }}</td>
+                <td>
+                    <a href="/delete_user/{{user.id}}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+    <h1>COVFEFE! IT WORKED!</h1>
+  
+
+    </table>
+
+    <form action="/">
+   <input id="back-button" type="submit" value="Back">
+      <!--<input type="submit" name="" value="No">-->
+    </form>
+    <form action="/delete_confirmation/{{course.id}}" method="post">
+      {% csrf_token %}
+
+      <!--<input style="" type="submit" name="" value="Yes! I want to delete this">-->
+    </form>
+
+  </body>
+</html>
+</body>
+
+</html>
